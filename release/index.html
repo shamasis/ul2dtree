@@ -1,0 +1,70 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>DTREE Converter</title>
+
+<!-- include ul2d in page head -->
+<link rel="StyleSheet" href="dtree/dtree.css" type="text/css" />
+<script type="text/javascript" src="dtree/dtree.js"></script>
+<script type="text/javascript" src="ul2d.js"></script>
+<script type="text/javascript">
+// set path to dtree library
+ul2d.dtreePath = "dtree/";
+</script>
+<!-- end ul2d inclusion -->
+
+</head>
+
+<body>
+<div class="dtree">
+
+	<p><a href="javascript: list1_d.openAll();">open all</a> | <a href="javascript: list1_d.closeAll();">close all</a></p>
+	
+    <ul id="list1">
+    	<li>
+        	<a href="http://shamasis.net" title="linking">Link 1</a>
+        </li>
+    	<li>Link 2
+        		<ul>
+                    <li title="test"><a href="http://shamasis.net">Link 2.1</a></li>
+                    <li>
+                        <a href="http://shamasis.net">Link 2.2</a>
+                    </li>
+                    <li>
+                        <a href="http://shamasis.net">Link 2.3</a>
+                    </li>
+                </ul>
+        </li>
+    	<li>
+        	<a href="http://shamasis.net">Link 3</a>
+        </li>
+        <li>
+        	<a href="http://shamasis.net">Link 4</a>
+            	<ul>
+                    <li title="test">
+                        <a href="http://shamasis.net">Link 4.1</a>
+                    </li>
+                    <li>
+                        <a href="http://shamasis.net">Link 4.2</a>
+                    </li>
+                    <li>
+                        <a href="http://shamasis.net">Link 4.3</a>
+                    </li>
+                </ul>
+        </li>
+    	<li>
+        	<a href="http://shamasis.net">Link 5</a>
+        </li>
+    </ul>
+    
+    <!-- script to convert the list into dtree -->
+    <script type="text/javascript">
+		list1_d = ul2d.parse('list1', 'FusionCharts DOM');
+		document.write(list1_d);
+	</script>
+	<!-- end dtree conversion -->
+
+</div>
+</body>
+</html>
